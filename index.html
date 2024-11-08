@@ -71,9 +71,8 @@
 		</div>
 	</section>
 </body>
-<!--script type="text/javascript" src="js/main.js"></script-->
 <script type="text/javascript">
-	var btn = document.getElementById('btnSave');
+var btn = document.getElementById('btnSave');
 var tcodigo = document.getElementById('codigo');
 var tnombre = document.getElementById('nombre');
 var tbodega = document.getElementById('bodega');
@@ -246,69 +245,85 @@ function countChecked() {
 }
 
 function validations() {
+
+	validate = true;
+
 	if (tcodigo.value === "") {
 		alert("El código del producto no puede estar en blanco.");
 		validate = false;
+		return;
 	}
 
 	if(!letterNumber(tcodigo.value)){
 		alert("El código del producto debe estar compuesta con letras y números.");
 		validate = false;
+		return;
 	}
 
 	if(!sizeString(5, 15, tcodigo.value)){
 		alert("El código del producto debe tener entre 5 y 15 caracteres.");
 		validate = false;
+		return;
 	}
 
 	if (tnombre.value === "") {
 		alert("El nombre del producto no puede estar en blanco.");
 		validate = false;
+		return;
 	}
 	
 	if(!sizeString(2, 50, tnombre.value)){
 		alert("El nombre del producto debe tener entre 2 y 50 caracteres.");
 		validate = false;
+		return;
 	}
 
 	if (tprecio.value === "") {
 		alert("El precio del producto no puede estar en blanco.");
 		validate = false;
+		return;
 	}
 
 	if(!validePrice(tprecio.value)){
 		alert("El precio del producto debe ser un número positivo con hasta dos decimales.");
 		validate = false;
+		return;
 	}
 
 	if(countChecked()<2) {
 		alert("Debe seleccionar al menos dos materiales para el producto.");
 		validate = false;
+		return;
 	}
 
 	if (tbodega.value === "") {
 		alert("Debe seleccionar una bodega.");
 		validate = false;
+		return;
 	}
 
 	if (tsucursal.value === "") {
 		alert("Debe seleccionar una sucursal para la bodega seleccionada.");
 		validate = false;
+		return;
 	}
 
 	if (tmoneda.value === "") {
 		alert("Debe seleccionar una moneda para el producto.");
 		validate = false;
+		return;
 	}
 
 	if (tdescripcion.value === "") {
 		alert("Debe seleccionar una moneda para el producto.");
 		validate = false;
+		return;
 	}
 
 	if (!sizeString(10, 100, tdescripcion.value)){
 		alert("La descripción del producto debe tener entre 10 y 100 caracteres.");
 		validate = false;
+		return;
 	}
 
 	return validate;
