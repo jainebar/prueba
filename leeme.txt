@@ -1,0 +1,6 @@
+Solo debes ejecutar SQL.
+Luego cambiar los datos de tu conexion local de DB que los parametos los encontraras en el archivo cn.php y podrás usar el formulario.
+
+Especificaciones del desarrollo:
+- MySQL 10.5.9
+- PHP 8.2.12  

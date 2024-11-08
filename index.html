@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<section class="form-main">
+		<div class="title">
+			<h1>Formulario de Producto</h1>
+		</div>
+		<div class="form-content grid-50 mt-5">
+			<div>
+				<label for="">Código</label><br>
+				<input type="text" id="codigo">
+			</div>
+			<div>
+				<label for="">Nombre</label><br>
+				<input type="text" id="nombre">
+			</div>
+			<div>
+				<label for="">Bodega</label><br>
+				<select name="select" id="bodega">
+					<option value=""></option>
+				</select>
+			</div>
+			<div>
+				<label for="">Sucursal</label><br>
+				<select name="select" id="sucursal">
+					<option value=""></option>
+				</select>
+			</div>
+			<div>
+				<label for="">Moneda</label><br>
+				<select name="select" id="moneda">
+					<option value=""></option>
+				</select>
+			</div>
+			<div>
+				<label for="">Precio</label><br>
+				<input type="text" id="precio">
+			</div>
+		</div>
+		<div class="pl-30">
+			<div>
+				<label for="">Material del producto</label><br>
+				<input type="checkbox" class="material" name="material" value="Plástica">
+				<label for="instagram">Plástica</label>
+				<input type="checkbox" class="material" name="material" value="Metal">
+				<label for="Metal">Metal</label>
+				<input type="checkbox" class="material" name="material" value="Madera">
+				<label for="Madera">Madera</label>
+				<input type="checkbox" class="material" name="material" value="Vidrio">
+				<label for="Vidrio">Vidrio</label>
+				<input type="checkbox" class="material" name="material" value="Textil">
+				<label for="Textil">Textil</label>
+			</div>
+		</div>
+		<div class="form-content">
+			<div>
+				<label for="">Descripción</label><br>
+				<textarea id="descripcion" ></textarea>
+			</div>
+		</div>
+		<div class="form-content">
+			<div class="title">
+				<input type="button" id="btnSave" value="Guardar Producto">
+			</div>
+		</div>
+	</section>
+</body>
+<script type="text/javascript" src="js.main.js"></script>
+</html>
