@@ -11,7 +11,7 @@ var validate = true;
 
 
 window.onload = (event) => {
-	const url = 'select.php?type=1';
+	const url = '../select.php?type=1';
 	fetchDataSelect(url, handleDataSelect);
 
 	tsucursal.disabled = true;
@@ -95,7 +95,7 @@ tbodega.addEventListener("change", function() {
 
 btn.onclick = async (event) => {
 	
-	const url = 'select.php?type=2&codigo=' + tcodigo.value;
+	const url = '../select.php?type=2&codigo=' + tcodigo.value;
 	const datos = await fetchDataCodigo(url);
 	const validate = await validations();
 
@@ -113,7 +113,7 @@ btn.onclick = async (event) => {
 		}
 
 		try {
-			const response = await fetch("insert.php", {
+			const response = await fetch("../insert.php", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
